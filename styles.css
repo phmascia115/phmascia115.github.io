@@ -111,6 +111,14 @@ section { padding: 72px 0; border-bottom: var(--edge); }
   background: var(--white);
   padding: 24px;
 }
+.hero-photo {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: var(--edge);
+  display: block;
+}
 .panel-row {
   display: flex;
   flex-direction: column;
@@ -253,4 +261,16 @@ section { padding: 72px 0; border-bottom: var(--edge); }
   }
   .site-header nav a { margin-left: 16px; }
   section { padding: 48px 0; }
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
 }
