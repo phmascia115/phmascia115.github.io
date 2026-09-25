@@ -24,11 +24,12 @@
 <main>
 
   <section class="hero">
-    <div class="hero-text">
-      <h1>Engineering closer<br>to the patient.</h1>
-      <p class="hero-sub">M.Eng. candidate in Biomedical Engineering, working at the intersection of clinical need and device design — spending time in the OR to understand problems before drawing a single line.</p>
+    <div class="hero-text reveal">
+      <h1>Philip Mascia,<br>Biomedical Engineer.</h1>
+      <p class="hero-sub reveal">M.Eng. candidate in Biomedical Engineering, working at the intersection of clinical need and device design — spending time in the OR to understand problems before drawing a single line.</p>
     </div>
-    <div class="hero-panel" aria-label="Current program summary">
+    <div class="hero-panel reveal" aria-label="Current program summary">
+      <img src='images/_DSC7150.JPG' class="hero-photo">
       <div class="panel-row">
         <span class="panel-label">Program</span>
         <span class="panel-value">M.Eng., Biomedical Engineering</span>
@@ -49,12 +50,12 @@
   </section>
 
   <section id="about" class="about">
-    <div class="about-text">
+    <div class="about-text reveal">
       <h2>About</h2>
       <p>I'm a biomedical engineering graduate student focused on device design that starts in the clinical setting rather than the lab. Over the past year, I've served as Clinical Liaison on a Biomedical Clinical Needs Finding project, observing cardiac procedures — including CABG and TAVR — alongside a cardiac surgeon to identify where operating room efficiency breaks down, and conceptualizing a device to address it.</p>
       <p>That work sits at the center of how I approach engineering: talk to the people using the tools, watch the process closely, and let the constraints of the room — sterility, time pressure, the surgical team's attention — shape the design, not just the spec sheet.</p>
     </div>
-    <div class="about-spec">
+    <div class="about-spec reveal">
       <div class="spec-item">
         <span class="spec-label">Focus</span>
         <span class="spec-value">Cardiac device design, clinical needs finding</span>
@@ -73,7 +74,7 @@
   <section id="work" class="work">
     <h2>Selected work</h2>
 
-    <article class="project">
+    <article class="project reveal">
       <div class="project-main">
         <h3>Improving OR Efficiency in Cardiac Procedures</h3>
         <p>Year-long clinical needs finding project embedded with a cardiac surgical team. Observed CABG and TAVR procedures to identify recurring inefficiencies in the operating room, then led need identification and early concept development for a device to address one of them.</p>
@@ -88,7 +89,7 @@
       </div>
     </article>
 
-    <article class="project">
+    <article class="project reveal">
       <div class="project-main">
         <h3>[Second project title]</h3>
         <p>[One or two sentences on the problem, your approach, and the outcome — replace with a coursework project, capstone, or lab work from UVA or BU.]</p>
@@ -102,7 +103,7 @@
       </div>
     </article>
 
-    <article class="project">
+    <article class="project reveal">
       <div class="project-main">
         <h3>[Third project title]</h3>
         <p>[Replace with another project — CAD work, a design competition, research, or a fabrication build.]</p>
@@ -121,7 +122,7 @@
   <section id="skills" class="skills">
     <h2>Skills</h2>
     <div class="skills-grid">
-      <div class="skills-group">
+      <div class="skills-group reveal">
         <h3>Clinical</h3>
         <ul>
           <li>Clinical needs finding</li>
@@ -129,7 +130,7 @@
           <li>Stakeholder interviews</li>
         </ul>
       </div>
-      <div class="skills-group">
+      <div class="skills-group reveal">
         <h3>Design &amp; analysis</h3>
         <ul>
           <li>[CAD software]</li>
@@ -137,14 +138,14 @@
           <li>[Prototyping method]</li>
         </ul>
       </div>
-      <div class="skills-group">
+      <div class="skills-group reveal">
         <h3>Programming</h3>
         <ul>
           <li>[Language]</li>
           <li>[Language]</li>
         </ul>
       </div>
-      <div class="skills-group">
+      <div class="skills-group reveal">
         <h3>Fabrication</h3>
         <ul>
           <li>[Method]</li>
@@ -154,7 +155,7 @@
     </div>
   </section>
 
-  <section id="contact" class="contact">
+  <section id="contact" class="contact reveal">
     <h2>Get in touch</h2>
     <p>I'm looking for opportunities in medical device design and clinical engineering.</p>
     <a class="contact-email" href="mailto:p.mascia115@gmail.com">p.mascia115@gmail.com</a>
@@ -170,6 +171,17 @@
   <span>© 2026 Philip Mascia</span>
   <a href="#top">Back to top</a>
 </footer>
-
+<script>
+  const revealEls = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+revealEls.forEach(el => observer.observe(el));
+</script>
 </body>
 </html>
