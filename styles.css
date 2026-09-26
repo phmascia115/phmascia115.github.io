@@ -101,6 +101,13 @@ section { padding: 72px 0; border-bottom: var(--edge); }
   line-height: 1.08;
   letter-spacing: -0.01em;
 }
+.hero h1.hero-title {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 800;
+  font-size: clamp(48px, 7vw, 96px);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+}
 .hero-sub {
   margin-top: 24px;
   max-width: 46ch;
