@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Improving OR Efficiency in Cardiac Procedures — Philip Mascia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body id="top">
+
+<header class="site-header">
+  <span class="site-name">Philip Mascia</span>
+</header>
+
+<main>
+
+  <div class="project-nav reveal">
+    <a class="hero-cta" href="index.html#work">← Back to selected work</a>
+  </div>
+
+  <section class="project-meta-block reveal">
+    <div class="meta-row">
+      <div class="meta-box">
+        <span class="panel-label">Date completed</span>
+        <span class="panel-value">[Month Year]</span>
+      </div>
+      <div class="meta-box">
+        <span class="panel-label">Course / Lab</span>
+        <span class="panel-value">Biomedical Clinical Needs Finding</span>
+      </div>
+      <div class="meta-box">
+        <span class="panel-label">Role</span>
+        <span class="panel-value">Clinical Liaison, cardiac team</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-title-block reveal">
+    <h1 class="project-title">Improving OR Efficiency in Cardiac Procedures</h1>
+    <ul class="tags project-skills">
+      <li>Clinical observation</li>
+      <li>Needs finding</li>
+      <li>Cardiac surgery</li>
+      <li>[Add another skill]</li>
+    </ul>
+  </section>
+
+  <section class="project-section reveal">
+    <h2>Overview</h2>
+    <p>[Two or three sentences setting up the project: what the clinical need was, which procedures you observed (CABG, TAVR), and why OR efficiency was the focus. Frame the problem before the solution.]</p>
+    <p>[A second paragraph — who you worked with (the cardiac surgeon, the surgical team), how long the observation period ran, and what made this a genuine needs-finding project rather than a pre-defined assignment.]</p>
+  </section>
+
+  <section class="project-section reveal">
+    <h2>Approach</h2>
+    <p>[Describe how you actually did the needs finding — how many procedures you observed, what you were looking for, how you captured observations in the room, and how those observations turned into a specific need statement.]</p>
+    <p>[A second paragraph on concept development — how the identified need led to an early device concept, any iteration, and how you validated the direction with the surgical team or your project advisors.]</p>
+  </section>
+
+  <section class="project-section reveal">
+    <h2>Outcome</h2>
+    <p>[What the project produced — a validated need statement, an early concept, a presentation or deliverable — and any feedback received from the clinical team or course evaluators.]</p>
+    <p>[A second paragraph on what you took away from it, or where the project could go next if continued.]</p>
+  </section>
+
+  <section class="project-section reveal">
+    <h2>Photos &amp; poster</h2>
+    <div class="media-grid">
+      <div class="media-placeholder">Add photo</div>
+      <div class="media-placeholder">Add photo</div>
+      <div class="media-placeholder">Add photo</div>
+    </div>
+    <a class="hero-cta" href="images/project-01-poster.pdf">View project poster</a>
+  </section>
+
+  <div class="project-footer-nav reveal">
+    <a class="hero-cta" href="#top">Back to top</a>
+    <a class="hero-cta hero-cta-secondary" href="index.html#work">Back to projects</a>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <span>© 2026 Philip Mascia</span>
+  <a href="#top">Back to top</a>
+</footer>
+<script>
+  const revealEls = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+revealEls.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
