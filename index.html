@@ -36,18 +36,54 @@
           <a class="hero-cta hero-cta-secondary" href="images/Philip Mascia.Resume.pdf">VIEW RESUME</a>
         </div>
       </div>
-      <div class="hero-visual reveal" aria-hidden="true">
-        <svg class="heartbeat-heart" viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg">
-          <path d="M50 82 C20 60 4 40 4 22 C4 8 14 0 26 0 C36 0 44 6 50 16 C56 6 64 0 74 0 C86 0 96 8 96 22 C96 40 80 60 50 82 Z"/>
+      <div class="hero-visual reveal" aria-label="Diagram of blood flow through the heart">
+        <svg class="heart-diagram" viewBox="-60 -30 590 510" xmlns="http://www.w3.org/2000/svg">
+
+          <!-- great vessels -->
+          <path class="vessel-blue" d="M105,10 C100,40 105,60 115,75 C140,90 165,100 180,110 C178,150 172,185 168,215 C170,175 172,135 180,100 C230,68 300,50 358,48"/>
+          <path class="vessel-red" d="M358,55 C330,78 295,90 262,95 C250,120 240,140 235,160"/>
+          <path class="vessel-red" d="M235,160 C238,110 238,70 220,35 C195,5 130,-5 75,15 C62,20 55,24 50,28"/>
+
+          <!-- lung -->
+          <ellipse class="lung-shape" cx="368" cy="48" rx="30" ry="40" transform="rotate(20 368 48)"/>
+
+          <!-- outer silhouette -->
+          <path class="heart-outline" d="M210,55 C175,10 100,5 65,50 C25,100 25,170 55,220 C80,300 150,380 210,430 C270,380 340,300 365,220 C395,170 395,100 355,50 C320,5 245,10 210,55 Z"/>
+
+          <!-- chambers -->
+          <path class="chamber chamber-right chamber-atrium" d="M65,205 C40,160 45,95 85,60 C120,30 165,35 205,70 C210,110 205,160 205,205 C155,222 105,222 65,205 Z"/>
+          <path class="chamber chamber-right chamber-ventricle" d="M65,220 C105,235 155,235 205,222 C208,270 202,340 210,405 C165,370 105,320 75,270 C62,250 60,235 65,220 Z"/>
+          <path class="chamber chamber-left chamber-atrium" d="M355,205 C380,160 375,95 335,60 C300,30 255,35 215,70 C210,110 215,160 215,205 C265,222 315,222 355,205 Z"/>
+          <path class="chamber chamber-left chamber-ventricle" d="M355,220 C315,235 265,235 215,222 C212,270 218,340 210,405 C255,370 315,320 345,270 C358,250 360,235 355,220 Z"/>
+
+          <!-- septum + valve plane -->
+          <path class="heart-septum" d="M210,95 C200,180 220,320 210,410"/>
+          <path class="heart-septum" d="M60,215 C120,245 170,205 210,225 C250,205 300,245 360,215"/>
+
+          <!-- labels -->
+          <line class="heart-leader" x1="-35" y1="140" x2="60" y2="140"/>
+          <text class="heart-lbl" x="-40" y="145" text-anchor="end">RA</text>
+          <line class="heart-leader" x1="-35" y1="310" x2="60" y2="310"/>
+          <text class="heart-lbl" x="-40" y="315" text-anchor="end">RV</text>
+          <line class="heart-leader" x1="460" y1="140" x2="358" y2="140"/>
+          <text class="heart-lbl" x="465" y="145">LA</text>
+          <line class="heart-leader" x1="460" y1="310" x2="358" y2="310"/>
+          <text class="heart-lbl" x="465" y="315">LV</text>
+          <line class="heart-leader" x1="128" y1="-20" x2="107" y2="12"/>
+          <text class="heart-lbl" x="95" y="-25" text-anchor="middle">Vena cava</text>
+          <line class="heart-leader" x1="20" y1="35" x2="50" y2="28"/>
+          <text class="heart-lbl" x="-40" y="40">Aorta</text>
+          <text class="heart-lbl" x="335" y="-8">Lungs</text>
+
+          <!-- flowing blood cells -->
+          <circle class="blood-cell cell-blue" style="animation-delay:0s"/>
+          <circle class="blood-cell cell-blue" style="animation-delay:-0.87s"/>
+          <circle class="blood-cell cell-blue" style="animation-delay:-1.73s"/>
+          <circle class="blood-cell cell-red1" style="animation-delay:0s"/>
+          <circle class="blood-cell cell-red1" style="animation-delay:-0.7s"/>
+          <circle class="blood-cell cell-red2" style="animation-delay:0s"/>
+          <circle class="blood-cell cell-red2" style="animation-delay:-0.8s"/>
         </svg>
-        <div class="ecg-track">
-          <svg class="ecg-line" viewBox="0 0 600 100" preserveAspectRatio="none">
-            <polyline points="0,50 40,50 55,50 65,20 75,80 85,10 95,50 110,50 160,50 175,50 185,20 195,80 205,10 215,50 230,50 280,50 295,50 305,20 315,80 325,10 335,50 350,50 400,50 415,50 425,20 435,80 445,10 455,50 470,50 520,50 535,50 545,20 555,80 565,10 575,50 590,50 600,50" fill="none"/>
-          </svg>
-          <svg class="ecg-line ecg-line-copy" viewBox="0 0 600 100" preserveAspectRatio="none">
-            <polyline points="0,50 40,50 55,50 65,20 75,80 85,10 95,50 110,50 160,50 175,50 185,20 195,80 205,10 215,50 230,50 280,50 295,50 305,20 315,80 325,10 335,50 350,50 400,50 415,50 425,20 435,80 445,10 455,50 470,50 520,50 535,50 545,20 555,80 565,10 575,50 590,50 600,50" fill="none"/>
-          </svg>
-        </div>
       </div>
     </div>
     <p class="scroll-hint reveal">Scroll to explore</p>
