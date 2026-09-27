@@ -153,62 +153,113 @@ section { padding: 72px 0; border-bottom: var(--edge); }
   color: var(--ink-soft);
 }
 
-/* ---- Hero visual: live heartbeat + ECG ---- */
+/* ---- Hero visual: anatomical blood-flow diagram ---- */
 .hero-visual {
   border: var(--edge);
   background: var(--white);
-  padding: 32px 24px 24px;
+  padding: 20px;
   min-height: 320px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 28px;
 }
-.heartbeat-heart {
-  width: 88px;
-  height: auto;
-  fill: var(--copper);
-  transform-origin: center;
-  animation: heartbeat 1.1s ease-in-out infinite;
-}
-@keyframes heartbeat {
-  0%   { transform: scale(1); }
-  14%  { transform: scale(1.18); }
-  28%  { transform: scale(1); }
-  42%  { transform: scale(1.12); }
-  70%  { transform: scale(1); }
-  100% { transform: scale(1); }
-}
-.ecg-track {
+.heart-diagram {
   width: 100%;
-  height: 60px;
-  position: relative;
-  overflow: hidden;
-  border-top: var(--edge);
-  border-bottom: var(--edge);
+  max-width: 340px;
+  height: auto;
+  overflow: visible;
 }
-.ecg-line {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 600px;
-  height: 60px;
-  animation: ecg-scroll 3.2s linear infinite;
+
+.heart-outline {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 3;
 }
-.ecg-line polyline {
-  stroke: var(--teal);
+.heart-septum {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 2;
+}
+.chamber {
+  stroke: var(--ink);
   stroke-width: 2.5;
+  fill-opacity: 0.35;
+  transform-box: fill-box;
+  transform-origin: center;
 }
-.ecg-line-copy {
-  left: 600px;
+.chamber-right { fill: var(--teal); }
+.chamber-left { fill: var(--copper); }
+.chamber-atrium { animation: pulse-atrium 1.1s ease-in-out infinite; }
+.chamber-ventricle { animation: pulse-ventricle 1.1s ease-in-out infinite; animation-delay: 0.15s; }
+@keyframes pulse-atrium {
+  0%, 100% { transform: scale(1); fill-opacity: 0.35; }
+  20% { transform: scale(1.035); fill-opacity: 0.5; }
+  40% { transform: scale(1); fill-opacity: 0.35; }
 }
-@keyframes ecg-scroll {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-600px); }
+@keyframes pulse-ventricle {
+  0%, 100% { transform: scale(1); fill-opacity: 0.35; }
+  20% { transform: scale(1.045); fill-opacity: 0.5; }
+  40% { transform: scale(1); fill-opacity: 0.35; }
+}
+
+.vessel-blue {
+  fill: none;
+  stroke: var(--teal);
+  stroke-width: 14;
+  stroke-linecap: round;
+}
+.vessel-red {
+  fill: none;
+  stroke: var(--copper);
+  stroke-width: 14;
+  stroke-linecap: round;
+}
+.lung-shape {
+  fill: var(--paper);
+  stroke: var(--ink);
+  stroke-width: 2;
+}
+.heart-lbl {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  fill: var(--teal);
+}
+.heart-leader {
+  stroke: var(--paper-line);
+  stroke-width: 1;
+}
+
+.blood-cell {
+  r: 5px;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.cell-blue {
+  fill: var(--teal);
+  offset-path: path('M105,10 C100,40 105,60 115,75 C140,90 165,100 180,110 C178,150 172,185 168,215 C170,175 172,135 180,100 C230,68 300,50 358,48');
+  animation-name: flow-segment;
+  animation-duration: 2.6s;
+}
+.cell-red1 {
+  fill: var(--copper);
+  offset-path: path('M358,55 C330,78 295,90 262,95 C250,120 240,140 235,160');
+  animation-name: flow-segment;
+  animation-duration: 1.4s;
+}
+.cell-red2 {
+  fill: var(--copper);
+  offset-path: path('M235,160 C238,110 238,70 220,35 C195,5 130,-5 75,15 C62,20 55,24 50,28');
+  animation-name: flow-segment;
+  animation-duration: 1.6s;
+}
+@keyframes flow-segment {
+  0%   { offset-distance: 0%; opacity: 0; }
+  8%   { opacity: 1; }
+  92%  { opacity: 1; }
+  100% { offset-distance: 100%; opacity: 0; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .heartbeat-heart, .ecg-line { animation: none; }
+  .chamber-atrium, .chamber-ventricle, .blood-cell { animation: none; opacity: 1; }
 }
 
 /* ---- Info panel (headshot + program summary, now in About) ---- */
