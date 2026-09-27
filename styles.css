@@ -156,7 +156,6 @@ section { padding: 72px 0; border-bottom: var(--edge); }
 /* ---- Hero visual: heart rate monitor ---- */
 .hero-visual {
   border: var(--edge);
-  background: var(--white);
   padding: 28px 24px;
   min-height: 320px;
   display: flex;
