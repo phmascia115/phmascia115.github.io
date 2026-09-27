@@ -156,46 +156,13 @@ section { padding: 72px 0; border-bottom: var(--edge); }
 /* ---- Hero visual: heart rate monitor ---- */
 .hero-visual {
   border: var(--edge);
-  background: var(--ink);
+  background: var(--white);
   padding: 28px 24px;
   min-height: 320px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 24px;
-}
-:root { --monitor-green: #6FE7C0; }
-
-.monitor-readout {
-  display: flex;
-  align-items: baseline;
-  gap: 8px;
-}
-.monitor-pulse-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--monitor-green);
-  align-self: center;
-  animation: pulse-dot 0.83s ease-in-out infinite;
-}
-.monitor-label {
-  font-family: var(--font-mono);
-  font-size: 13px;
-  color: var(--monitor-green);
-  letter-spacing: 0.05em;
-  margin-left: 4px;
-}
-.monitor-bpm {
-  font-family: var(--font-mono);
-  font-size: 40px;
-  font-weight: 500;
-  color: var(--monitor-green);
-}
-.monitor-unit {
-  font-family: var(--font-mono);
-  font-size: 13px;
-  color: rgba(255,255,255,0.5);
 }
 .monitor-track {
   width: 100%;
@@ -212,7 +179,7 @@ section { padding: 72px 0; border-bottom: var(--edge); }
   animation: monitor-scroll 3.32s linear infinite;
 }
 .monitor-wave polyline {
-  stroke: var(--monitor-green);
+  stroke: var(--teal);
   stroke-width: 2.5;
 }
 .monitor-wave-copy { left: 600px; }
@@ -220,13 +187,8 @@ section { padding: 72px 0; border-bottom: var(--edge); }
   from { transform: translateX(0); }
   to   { transform: translateX(-600px); }
 }
-@keyframes pulse-dot {
-  0%, 100% { opacity: 0.3; transform: scale(0.85); }
-  15% { opacity: 1; transform: scale(1.15); }
-  30% { opacity: 0.5; transform: scale(0.95); }
-}
 @media (prefers-reduced-motion: reduce) {
-  .monitor-wave, .monitor-pulse-dot { animation: none; }
+  .monitor-wave { animation: none; }
 }
 /* ---- Info panel (headshot + program summary, now in About) ---- */
 .info-panel {
