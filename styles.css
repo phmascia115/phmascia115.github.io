@@ -256,6 +256,9 @@ section { padding: 72px 0; border-bottom: var(--edge); }
   border-top: var(--edge);
   position: relative;
 }
+.project:hover {
+  background: var(--paper-hover);
+}
 .project::before {
   content: "";
   position: absolute;
