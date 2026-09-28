@@ -163,11 +163,20 @@ section { padding: 72px 0; border-bottom: var(--edge); }
 }
 .scroll-hint {
   text-align: center;
-  margin: 40px 0 0;
-  padding-bottom: 24px;
+  margin-top: 56px;
+  padding-bottom: 8px;
   font-family: var(--font-mono);
   font-size: 13px;
   color: var(--ink-soft);
+  transition: color 0.3s ease;
+  animation: scroll-hint-bounce 2.2s ease-in-out infinite;
+}
+.scroll-hint:hover {
+  color: var(--teal);
+}
+@keyframes scroll-hint-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
 }
 
 /* ---- Hero visual: heart rate monitor ---- */
