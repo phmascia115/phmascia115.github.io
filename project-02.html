@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>[Second Project Title] — Philip Mascia</title>
+<title>Designing a Human-Wearable Moulage for Hemorrhage Control Wound Packing Training — Philip Mascia</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -25,54 +25,56 @@
     <div class="meta-row">
       <div class="meta-box">
         <span class="panel-label">Date completed</span>
-        <span class="panel-value">[Month Year]</span>
+        <span class="panel-value">May 2026</span>
       </div>
       <div class="meta-box">
         <span class="panel-label">Course / Lab</span>
-        <span class="panel-value">[Course or lab name]</span>
+        <span class="panel-value">Biomedical Capstone Design</span>
       </div>
       <div class="meta-box">
         <span class="panel-label">Role</span>
-        <span class="panel-value">[Your role]</span>
+        <span class="panel-value">Member of a Team of 5</span>
       </div>
     </div>
   </section>
 
   <section class="project-title-block reveal">
-    <h1 class="project-title">[Second Project Title]</h1>
+    <h1 class="project-title">Designing a Human-Wearable Moulage for Hemorrhage Control Wound Packing Training</h1>
     <ul class="tags project-skills">
-      <li>[Skill]</li>
-      <li>[Skill]</li>
-      <li>[Skill]</li>
+      <li>CAD Design</li>
+      <li>Circuit Design</li>
+      <li>Embedded Systems (Arduino)</li>
+      <li>Silicone Molding and Fabrication</li>
+      <li>Data Analysis</li>
     </ul>
   </section>
 
   <section class="project-section reveal">
     <h2>Overview</h2>
-    <p>[One or two sentences on what this project was and the problem it addressed.]</p>
-    <p>[A second paragraph with more context — who it was for, why it mattered, what constraints you were working under.]</p>
+    <p>Uncontrolled bleeding is the leading preventable cause of death on the battlefield. Wound packing is a lifesaving intervention when tourniquets are ineffective, such as high junctional injuries. However, current training relies on static manikins or moulage devices that lack real time, quantitative feedback. As a result, trainees cannot reliably determine if their packing would have successfully controlled bleeding.</p>
+    <p>The Defense Innovation Unit (DIU) proposed a student project to design, prototype, and test a wearable device that simulates a bleeding wound, providing real-time feedback using pressure sensors to inform the trainee of proper pressure techniques. The groin/upper thigh area was selected for training realism, durability, and safety.</p>
   </section>
 
   <section class="project-section reveal">
     <h2>Approach</h2>
-    <p>[How you tackled the problem — your process, tools, key decisions.]</p>
-    <p>[A second paragraph on iteration, testing, or how the approach evolved.]</p>
+    <p>A CAD model of a wound cavity mould was designed using anatomically accurate geometry, including a 50 mm entry point and a 29 mm depth, simulating a gunshot wound to the thigh. The mould was iterated and printed, and silicone was poured to create the simulated wound cavity.</p>
+    <p>An elaborate circuit was constructed including a stepper motor, peristaltic pump, four FSR402 force sensors, and an LCD display. The circuit was coded so that the peristaltic pump flowed simulated blood out of the silicone wound cavity at a rate of 350 mL/min. If adequate pressure was read (average across four sensors), the flow would begin to decay. An LCD screen showed time elapsed since test start, as well as if adequate pressure was being applied to reduce blood flow. If it was not, the flow rapidly restored to 350 mL/min.</p>
   </section>
 
   <section class="project-section reveal">
     <h2>Outcome</h2>
-    <p>[What you produced or achieved, with specifics — results, data, feedback.]</p>
-    <p>[A second paragraph on what you learned or what's next.]</p>
+    <p>The results included a successful chart illustrating the flow rate decaying over time while adequate pressure is applied, and flow restoration when adequate pressure is not sustained. The results addressed the primary aim of developing a responsive hemorrhage training system by demonstrating a clear, pressure-dependent system. Additionally, the system successfully integrated real-time sensor feedback and pump control, achieving consistent and physiologically relevant flow modulation.</p>
+    <p>Some future directions of this project include replacing current pressure sensors with higher range sensors, incorporate depth sensing to determing if the wound packing is deep enough to block bleeding, and to expand the range of different wound geometries.</p>
   </section>
 
   <section class="project-section reveal">
     <h2>Photos &amp; poster</h2>
     <div class="media-grid">
-      <div class="media-placeholder">Add photo</div>
-      <div class="media-placeholder">Add photo</div>
-      <div class="media-placeholder">Add photo</div>
+      <img class="media-item" src="images/Team.jpg" alt="Team Picture">
+      <img class="media-item" src="images/Device.jpeg" alt="Final Device Picture">
+      <iframe class="media-item wide" src="https://youtu.be/aLlrbUD09sQ" title="Project demo video" allowfullscreen></iframe>
     </div>
-    <a class="hero-cta" href="images/project-02-poster.pdf">View project poster</a>
+    <a class="hero-cta" href="images/Designing a Human-Wearable Moulage for Hemorrhage Control Wound Packing Training.pdf">View project poster</a>
   </section>
 
   <div class="project-footer-nav reveal">
