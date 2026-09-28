@@ -359,9 +359,6 @@ main > section {
 main > section:nth-of-type(even) {
   background: var(--paper-alt);
 }
-main > section:hover {
-  background: var(--paper-hover);
-}
 
 /* ---- Footer ---- */
 .site-footer {
