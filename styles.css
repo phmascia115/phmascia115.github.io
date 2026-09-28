@@ -421,3 +421,19 @@ section { padding: 72px 0; border-bottom: var(--edge); }
 @media (max-width: 720px) {
   .media-grid { grid-template-columns: 1fr 1fr; }
 }
+.media-item {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  background: var(--ink);
+  border: var(--edge);
+  display: block;
+}
+.media-item.wide {
+  grid-column: 1 / -1;
+  aspect-ratio: 16 / 9;
+}
+img.media-item {
+  object-fit: cover;
+  background: none;
+}
