@@ -7,8 +7,8 @@
   --teal: #3F6E63;
   --copper: #B5622F;
   --white: #FFFFFF;
-  --paper-alt: #E4E9E5
-  --paper-hover: #DFEAE5
+  --paper-alt: #E4E9E5;
+  --paper-hover: #DFEAE5;
 
   --font-display: 'Fraunces', serif;
   --font-body: 'Inter', -apple-system, sans-serif;
@@ -252,18 +252,23 @@ section { padding: 72px 0; border-bottom: var(--edge); }
   display: grid;
   grid-template-columns: 1.7fr 1fr;
   gap: 32px;
-  padding-top: 28px;
-  padding-bottom: 28px;
-  padding-left: 0;
-  padding-right: 0;
+  padding: 28px 0;
   border-top: var(--edge);
-  border-left: 3px solid transparent;
-  transition: padding-left 0.25s ease, border-left-color 0.25s ease, background-color 0.25s ease;
+  position: relative;
 }
-.project:hover {
-  padding-left: 18px;
-  border-left-color: var(--teal);
-  background: var(--white);
+.project::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--teal);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.project:hover::before {
+  opacity: 1;
 }
 .project:first-of-type { border-top: var(--edge); }
 .project h3 { font-size: 21px; margin-bottom: 10px; }
