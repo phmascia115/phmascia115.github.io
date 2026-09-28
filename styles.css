@@ -14,7 +14,7 @@
   --font-body: 'Inter', -apple-system, sans-serif;
   --font-mono: 'IBM Plex Mono', monospace;
 
-  --max: 1280px;
+  --max: none;
   --edge: 1px solid var(--paper-line);
 }
 
