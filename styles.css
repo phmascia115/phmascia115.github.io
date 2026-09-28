@@ -146,16 +146,17 @@ section { padding: 72px 0; border-bottom: var(--edge); }
   display: inline-block;
   padding: 12px 18px;
   border: var(--edge);
-  background: var(--white);
+  background: var(--paper-alt);
   color: var(--ink);
   font-family: var(--font-mono);
   font-size: 14px;
   text-decoration: none;
+  transition: border-color 0.3s ease, color 0.3s ease, background-color 0.3s ease;
 }
 .hero-cta:hover {
   border-color: var(--teal);
   color: var(--teal);
-  background: var(--paper-alt);
+  background: var(--paper-hover);
 }
 .hero-cta-secondary {
   background: transparent;
