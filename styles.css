@@ -259,10 +259,10 @@ section { padding: 72px 0; border-bottom: var(--edge); }
 .project::before {
   content: "";
   position: absolute;
-  left: 0;
   top: 0;
-  bottom: 0;
-  width: 3px;
+  left: 0;
+  right: 0;
+  height: 2px;
   background: var(--teal);
   opacity: 0;
   transition: opacity 0.4s ease;
@@ -326,14 +326,6 @@ section { padding: 72px 0; border-bottom: var(--edge); }
   color: var(--ink-soft);
 }
 .skills-group li { padding: 5px 0; }
-.skills-group {
-  padding: 10px;
-  margin: -10px;
-  transition: background-color 0.25s ease;
-}
-.skills-group:hover {
-  background: var(--white);
-}
 .meta-box {
   transition: border-color 0.25s ease, background-color 0.25s ease;
 }
@@ -497,4 +489,6 @@ img.media-item {
   object-fit: cover;
   background: none;
 }
-
+.about h2, .work h2, .skills h2, .contact h2 {
+  font-size: 36px;
+}
