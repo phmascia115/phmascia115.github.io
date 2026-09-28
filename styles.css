@@ -452,7 +452,8 @@ main > section:nth-of-type(even) {
 
 .project-section {
   border-top: var(--edge);
-  padding: 48px 0;
+  padding-top: 48px;
+  padding-bottom: 48px;
 }
 .project-section h2 {
   font-size: 26px;
