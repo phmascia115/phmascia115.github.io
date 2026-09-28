@@ -147,7 +147,7 @@ section { padding: 72px 0; border-bottom: var(--edge); }
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
-  margin-top: 28px;
+  margin-top: 56px;
 }
 .hero-cta {
   display: inline-block;
