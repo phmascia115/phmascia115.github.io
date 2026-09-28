@@ -170,13 +170,13 @@ section { padding: 72px 0; border-bottom: var(--edge); }
 }
 .scroll-hint {
   text-align: center;
-  margin-top: 56px;
+  margin-top: 90px;
   padding-bottom: 8px;
   font-family: var(--font-mono);
   font-size: 13px;
   color: var(--ink-soft);
   transition: color 0.3s ease;
-  animation: scroll-hint-bounce 2.2s ease-in-out infinite;
+  animation: scroll-hint-bounce 2.2s ease-in-out 2;
 }
 .scroll-hint:hover {
   color: var(--teal);
