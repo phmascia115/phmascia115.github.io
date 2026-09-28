@@ -14,10 +14,9 @@
   --font-body: 'Inter', -apple-system, sans-serif;
   --font-mono: 'IBM Plex Mono', monospace;
 
-  --max: none;
+  --max: 1280px;
   --edge: 1px solid var(--paper-line);
 }
-
 * { box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }
@@ -64,6 +63,14 @@ main, .site-header, .site-footer {
   margin: 0 auto;
   padding-left: 32px;
   padding-right: 32px;
+}
+main > section {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  margin-left: -50vw;
+  padding-left: max(32px, calc((100vw - var(--max)) / 2 + 32px));
+  padding-right: max(32px, calc((100vw - var(--max)) / 2 + 32px));
 }
 
 section { padding: 72px 0; border-bottom: var(--edge); }
