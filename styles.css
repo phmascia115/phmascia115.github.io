@@ -127,14 +127,14 @@ section { padding: 72px 0; border-bottom: var(--edge); }
 }
 .hero-name {
   display: block;
-  font-size: clamp(56px, 9vw, 110px);
+  font-size: clamp(64px, 10.5vw, 130px);
   line-height: 0.98;
   letter-spacing: -0.01em;
 }
 .hero-role {
   display: block;
   margin-top: 6px;
-  font-size: clamp(26px, 3.6vw, 38px);
+  font-size: clamp(30px, 4.2vw, 46px);
   font-weight: 400;
   color: var(--ink-soft);
 }
@@ -147,7 +147,7 @@ section { padding: 72px 0; border-bottom: var(--edge); }
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
-  margin-top: 56px;
+  margin-top: 28px;
 }
 .hero-cta {
   display: inline-block;
