@@ -302,8 +302,17 @@ section { padding: 72px 0; border-bottom: var(--edge); }
   background: var(--paper-line);
 }
 .project-link {
-  font-size: 15px;
-  text-decoration: underline;
+  display: inline-block;
+  padding: 10px 16px;
+  border: var(--edge);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  text-decoration: none;
+  transition: border-color 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+}
+.project-link:hover {
+  border-color: var(--teal);
+  background: var(--paper-alt);
 }
 
 /* ---- Skills ---- */
