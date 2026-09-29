@@ -236,6 +236,8 @@ section { padding: 72px 0; border-bottom: var(--edge); }
 .panel-value {
   font-size: 15px;
   color: var(--ink);
+}
+.info-panel .panel-value {
   text-align: right;
 }
 
