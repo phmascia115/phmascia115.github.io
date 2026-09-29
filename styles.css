@@ -462,6 +462,9 @@ main > section:nth-of-type(even) {
   gap: 16px;
   margin-bottom: 28px;
 }
+.media-grid.two-up {
+  grid-template-columns: repeat(2, 1fr);
+}
 .media-placeholder {
   aspect-ratio: 4 / 3;
   border: 1px dashed var(--paper-line);
