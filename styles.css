@@ -509,5 +509,5 @@ img.media-item {
 }
 /* ---- Font ---- */
 h1, h2, h3, .site-name, .contact-email {
-  font-variation-settings: "SOFT" 0, "WONK" 0;
+  font-variation-settings: "SOFT" 0, "WONK" 0, "opsz" 20;
 }
