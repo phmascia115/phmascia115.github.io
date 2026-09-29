@@ -507,3 +507,7 @@ img.media-item {
 .about h2, .work h2, .skills h2, .contact h2 {
   font-size: 36px;
 }
+/* ---- Font ---- */
+h1, h2, h3, .site-name, .contact-email {
+  font-variation-settings: "SOFT" 0, "WONK" 0;
+}
