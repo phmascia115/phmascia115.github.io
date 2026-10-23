@@ -343,13 +343,6 @@ section { padding: 72px 0; border-bottom: var(--edge); }
   color: var(--ink-soft);
 }
 .skills-group li { padding: 5px 0; }
-.meta-box {
-  transition: border-color 0.25s ease, background-color 0.25s ease;
-}
-.meta-box:hover {
-  border-color: var(--teal);
-  background: var(--white);
-}
 .info-panel {
   transition: border-color 0.25s ease;
 }
